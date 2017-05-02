@@ -18,6 +18,11 @@ class Car:
         self.time += 1
 
     def average_speed(self):
+        # If the time is 0, we haven't moved yet, therefore our average speed
+        # can't be calculated yet
+        if self.time == 0:
+            return "unknown"
+
         return self.odometer / self.time
 
 
